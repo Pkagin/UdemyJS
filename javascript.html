@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+ <head>
+   <title>JavascriptStudy</title>
+   <style type="text/css">
+
+    main{
+    background-color: rgb(48, 54, 41);  
+    width: 850px;
+    height: 300px;
+    border:10px ridge pink;
+    }
+    
+
+    .circle{
+      width: 200px;
+      height:200px;
+      border-radius: 50%;
+      float: left;
+      margin: 30px;
+      border:ridge 10px black ;
+     
+      }
+
+   #red-circle{
+      background-color: red;
+    }
+   
+    #blue-circle{
+      background-color:blue;
+    }
+  
+    #yellow-circle{
+      background-color:yellow;
+    }
+   </style>
+ </head>
+ <body>
+ <main>
+  <div id="red-circle" class="circle"></div>
+
+  <div id="blue-circle" class="circle"></div>
+  
+  <div id="yellow-circle" class="circle"></div>
+ </main>
+  
+ <script type ="text/Javascript">
+    document.getElementById("red-circle").onclick = function () {
+      document.getElementById("red-circle").style.display = "none";
+    }
+    
+
+
+
+   
+ 
+ 
+ </script>
+ </body>  
+</html>
+
