@@ -1,0 +1,46 @@
+$("#circle").click(function(){
+    alert("円がクリックされました！");
+
+
+$("p").html("~~");
+pのとこが～～に変わる
+
+$("iframe").attr("websiteのURL")
+ウェブサイトが変わる　click→hoverすると、切り替えになる
+
+$("#circle").css("width","300px");
+
+$(".square").css("display","none");
+
+$(this)←div全てに対応
+
+$(this).fadeOut("slow");"slow"のほかに"normal","fast"
+
+)}
+
+$("#toggle").click(function(){
+    if($("#text").css("display") == "none"){
+        $("#text").fadeIn("slow");
+    }else{
+        $("#text").fadeOut("slow");
+    }
+})
+toggle 反転する
+
+$("#circle").animate({
+    width:"400px"
+,height:"400px"
+,marginLeft:"100px"
+},2000,function(){
+    $("#circle").css("background-color","red");
+});
+animate:動くようにできる
+
+let regax = /is/;
+let string = "Regax is great!";
+let result = string.match(regax);
+alert(result);
+https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_Expressions
+
+file:///C:/Users/sou0527/Desktop/HTML%E7%B7%B4%E7%BF%92/jquery-ui-1.12.1/index.html
+http://semooh.jp/jquery/

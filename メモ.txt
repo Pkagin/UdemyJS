@@ -1,0 +1,52 @@
+ //パラグラフのコンテンツを更新する処理
+        /*getElementByIdは、IDを指定してブロック要素を取り出します。
+        innerHTMLは、その中のコンテンツ（テクスト）を取り出します。
+        */
+
+          document.getElementById("text").innerHTML = "Hello Rob!";
+
+読みやすさ（タグをそろえる）、使いやすさ大事に！
+
+ <p id = "text">Hello World!</p>
+    <button id="myButtom">Change Text!</button>
+   
+document.getElementById("myButtom").onclick = function(){
+         alert("ボタンクリックしたね");
+
+ <p id="secondParagraph">Javascriptは、</p>
+    <button id="secondButoom">追記する！</button>
+
+
+
+    <script type="text/javascript">
+         //document.getElementById("secondParagraph").innerHTML += "うんち";
+    //文字列を追記する。appendする。
+
+    https://www.w3schools.com/Jsref/dom_obj_style.asp　←　JSのStyleObject
+
+　　document.getElementById("~").onclick = function(){
+    document.getElementById("^").style.color = "色";
+    ボタンを押したら使用を変更できる。
+  
+   if文
+    let x = 2;
+
+    if (x == 1) {
+      alert("xは１");
+    }else {
+      alert("xは１じゃない"+ x +"だお");
+    }
+
+    for文
+    for(let = x; x>1; x++)
+
+個別属性はid、共通属性はclassで指定。
+
+new Array() 配列が他変数を生成
+
+splice(何番目,何個削除,追加文)
+
+ドム操作＝げっとえれめんとばいあいでぃ
+
+$ git config --global user.name 'Pkagin'
+
