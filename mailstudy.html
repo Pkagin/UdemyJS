@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>メール</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" >
+      <style>
+          .header{
+              height: 50px;
+              background-color: aqua;
+              color: red;
+          } 
+          .main{
+              background-color: gray
+          }
+      </style>
+      
+  </head>
+
+  <body>
+<div class="header">
+ <h1 align="center">入力ホーム</h1>      
+</div>
+
+<div class="main">
+ <h2>こちらからメールを送ることが出来ます。</h2>
+</div>
+
+<div class="footer">
+<input type="text" id="send-name" name="send-name" placeholder="名前を入力してください。" value="" />
+      <p></p>
+<input type="text" placeholder="件名を入力してください。" id="send-subject" value="" />
+      <p></p>
+<textarea placeholder="メッセージを入力して下さい。" id="send-body" rows="5"></textarea>
+      <p></p>
+<input　type="button" id="send-btn" value="送信する">
+   
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript">
+$(function() {
+
+  $('#send-btn').on('click', function() {
+				
+    let name = $('#send-name').val();
+    let subject = $('#send-subject').val();
+    let body = $('#send-body').val();
+
+    if(name != "" && subject != "" && body != ""){
+		
+      $.ajax({
+        type: 'POST',
+        url: "./send_data_ajax.php", 
+        data: {
+          name:name,
+          subject:subject,
+          body:body
+        },
+        success: function( data ) {
+          if(data.match(/success/)){
+            alert("送信が完了しました。");
+            location.href = "./"; // 
+          }
+        },
+        error: function() {
+          alert("予期せぬエラーが発生。");
+        }
+      });
+    } else {
+      alert("キャンセルされました。");
+    }
+
+  }			
+		
+} else {
+
+  alert("未入力の項目があります。");
+
+}
+
+});
+</script>
+  
+      </div>    
+  </body>
+</html>
