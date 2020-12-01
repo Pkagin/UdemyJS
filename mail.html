@@ -52,7 +52,7 @@
  //サーバーからの返信を受け取る
  .done( function(data) {
    console.log(data.form);
-   alert(送信出来ました);
+   alert("送信出来ました");
    })
   
  //通信エラーの場合
@@ -64,13 +64,7 @@
  /*always ( function() {
   console.log(通信が終了しました);
    })*/
-
- $('form').submit(function( event ) {
-    event.preventDefault();
  
-    //post()の処理をここに記述する
- 
-})
  　})
 
 
