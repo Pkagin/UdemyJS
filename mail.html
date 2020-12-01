@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>メール</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" >
+      <style>
+          .header{
+              height: 50px;
+              background-color: aqua;
+              color: red;
+          } 
+          .main{
+              background-color: gray
+          }
+        .myButton{
+            height: 20px;
+            background-color: brown;
+          }
+      </style>
+      
+  </head>
+
+  <body>
+<div class="header">
+ <h1 align="center">入力フォーム</h1>      
+</div>
+
+<div class="main">
+ <h2>こちらからメールを送ることが出来ます。</h2>
+</div>
+
+<div class="footer">
+  <form>
+<input type="text"  name="send-name" placeholder="名前を入力してください。" value="" />
+      <p></p>
+<input type="text" placeholder="件名を入力してください。" value="" />
+      <p></p>
+<textarea placeholder="メッセージを入力して下さい。"></textarea>
+      <p></p>
+      <input type="submit" value="送信">
+</form>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript">
+ 
+ $('form').submit(function( event ) {
+    event.preventDefault();
+ //サーバーはメールアドレス不可？   
+  //$.post( 'sou0527.tv@icloud.com',$('form').serialize() )
+  $.post( 'https://httpbin.org/post',$('form').serialize() )
+ //サーバーからの返信を受け取る
+ .done( function(data) {
+   console.log(data.form);
+   })
+  
+ //通信エラーの場合
+ .fail( function() {
+  console.log(通信エラーが発生しました);
+   })
+  
+ //通信が終了した場合
+ /*always ( function() {
+  console.log(通信が終了しました);
+   })*/
+
+ $('form').submit(function( event ) {
+    event.preventDefault();
+ 
+    //post()の処理をここに記述する
+ 
+})
+ 　})
+
+
+</script>
+  
+      </div>    
+  </body>
+  
+</html>
